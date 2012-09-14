@@ -29,7 +29,7 @@ import distutils.core
 distutils.core.setup(
     name = "geolog_server",
     version = "0.1",
-    packages = ["geolog_server"],
+#    packages = ["geolog_server"],
     author = "Timur Evdokimov",
     author_email = "timur@jacum.com",
     url = "https://github.com/jacum/geolog-server",
@@ -42,11 +42,11 @@ distutils.core.setup(
         'pymongo',
         'jsonrpclib',
         'cherrypy',
-        json
+#        json,
     ],
 
     packages = [
         'geolog_server',
-        'tornadorpc'
+#        'tornadorpc',
     ]
 )
