@@ -41,6 +41,7 @@ distutils.core.setup(
         'tornado',
         'pymongo',
         'jsonrpclib',
+        'cherrypy',
         json
     ],
 
