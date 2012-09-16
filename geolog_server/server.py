@@ -251,7 +251,7 @@ class JSONHandler(RequestHandler):
 
 if __name__ == '__main__':
     LOG_FILENAME = '/opt/web/geolog/log/server.log'
-    logging.basicConfig(level=logging.INFO, filename=LOG_FILENAME)
+    logging.basicConfig(format='%(asctime)-15s %(clientip)s %(user)-8s %(message)s', level=logging.INFO, filename=LOG_FILENAME)
 
     # sensor listener
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0)
