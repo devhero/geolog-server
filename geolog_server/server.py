@@ -214,7 +214,7 @@ class JSONHandler(RequestHandler):
 
                     all_positions = position_history.find({'imei': imei}).sort([('created', 1)])
 
-                    trips = [{'imei' : imei}]
+                    trips = []
                     current_trip = None
                     previous = None
                     points = 0
@@ -240,7 +240,9 @@ class JSONHandler(RequestHandler):
                     current_trip['points'] = points
                     trips.append(current_trip)
 
-                    self.send_response(trips)
+                    document = {'imei' : imei, 'trips' : trips}
+
+                    self.send_response(document)
 
         except Exception, e:
             logging.error(e)
